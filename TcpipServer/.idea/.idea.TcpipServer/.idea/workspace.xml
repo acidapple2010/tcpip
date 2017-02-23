@@ -1,0 +1,1532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbbae985-2be7-4460-9efb-fdc996416dd2" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Server.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3818">
+              <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+              <folding>
+                <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+                <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+                <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+                <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+                <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+                <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+                <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+                <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+                <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+                <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+                <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+                <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+                <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+                <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+                <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+                <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+                <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+                <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+                <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+                <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+                <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+                <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+                <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+                <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_connpar</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/TcpipServer/Server.Designer.cs" />
+        <option value="$PROJECT_DIR$/TcpipServer/Server.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="106" />
+    <option name="y" value="22" />
+    <option name="width" value="817" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>General</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TcpipServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TcpipServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TcpipServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TcpipServer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="References" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.mono" />
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="ConnectRemote" factoryName="Mono remote" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <method />
+    </configuration>
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TcpipServer/TcpipServer.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="Default" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/TcpipServer/bin/Debug/TcpipServer.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TcpipServer/bin/Debug" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbbae985-2be7-4460-9efb-fdc996416dd2" name="Default" comment="" />
+      <created>1483532724288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1483532724288</updated>
+      <workItem from="1483532725641" duration="1395000" />
+      <workItem from="1483534518815" duration="1171000" />
+      <workItem from="1483537605370" duration="423000" />
+      <workItem from="1483539979340" duration="102000" />
+      <workItem from="1483551883945" duration="273000" />
+      <workItem from="1483552421351" duration="16000" />
+      <workItem from="1483552532154" duration="2479000" />
+      <workItem from="1483559852302" duration="545000" />
+      <workItem from="1483614216330" duration="1722000" />
+      <workItem from="1484597976715" duration="2056000" />
+      <workItem from="1485240555107" duration="546000" />
+      <workItem from="1485432912872" duration="1431000" />
+      <workItem from="1486199095101" duration="750000" />
+      <workItem from="1486201527819" duration="3984000" />
+      <workItem from="1486409083698" duration="684000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17577000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="106" y="22" width="817" height="726" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3254717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23612903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3818">
+          <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+          <folding>
+            <marker date="1486409603000" expanded="true" signature="6:158" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:182" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:253" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="6:254" ph="..." />
+            <marker date="1486409603000" expanded="true" signature="276:12976" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="315:12974" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="631:770" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="835:2258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1058:1871" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1656:1865" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1793:1859" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1895:2204" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="1905:2105" ph="/* If IP Address could not be found ... */" />
+            <marker date="1486409603000" expanded="true" signature="2334:2743" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2572:2739" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2811:4576" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="2919:3058" ph="/* We check if the iPAddress and port number provided is valid ... */" />
+            <marker date="1486409603000" expanded="true" signature="3104:3194" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3253:3409" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3414:3558" ph="/* We double check if we are still able to connect to the TCPListener ... */" />
+            <marker date="1486409603000" expanded="true" signature="3565:4284" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="3575:3741" ph="/* If all goes well then we will create a TcpListener parsing the ipaddress and port ... */" />
+            <marker date="1486409603000" expanded="true" signature="3798:3847" ph="/* Start the connection ... */" />
+            <marker date="1486409603000" expanded="true" signature="3879:3978" ph="/* We begin accepting connections from the client ... */" />
+            <marker date="1486409603000" expanded="true" signature="4064:4202" ph="/* Enable and Disable functionality ... */" />
+            <marker date="1486409603000" expanded="true" signature="4308:4571" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4580:4660" ph="/* When its been written to the client stream ... */" />
+            <marker date="1486409603000" expanded="true" signature="4723:5121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="4731:4887" ph="/* Here all we need to do is end the operation when the packets are sent ... */" />
+            <marker date="1486409603000" expanded="true" signature="4894:4989" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5013:5117" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5125:5253" ph="/* A seperate method has been created in order to accept a call back ... */" />
+            <marker date="1486409603000" expanded="true" signature="5304:7134" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5313:5459" ph="/* byte[] tx = new byte[21024]; ... */" />
+            <marker date="1486409603000" expanded="true" signature="5517:7000" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="5527:5704" ph="/* We must call this within every AsyncCall so that the connection is accepted continuesly ... */" />
+            <marker date="1486409603000" expanded="true" signature="5757:6303" ph="/* Get Todays date and time ... */" />
+            <marker date="1486409603000" expanded="true" signature="6521:6693" ph="/* While one client is connected, we can allow other clients to also connect ... */" />
+            <marker date="1486409603000" expanded="true" signature="6763:6862" ph="/* Set the default amount of bytes allowed ... */" />
+            <marker date="1486409603000" expanded="true" signature="7025:7130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7194:8733" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7362:8289" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="7649:7790" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8313:8729" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8323:8585" ph="/* MessageBox.Show(&quot;A Client has Disconnected!&quot;, &quot;TCP/IP Server&quot;, MessageBoxButtons.OK, MessageBoxIcon.Informatio ... */" />
+            <marker date="1486409603000" expanded="true" signature="8860:8932" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="8973:9121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9219:10263" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9395:9560" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9568:10130" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9677:10124" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="9721:10118" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10154:10258" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10322:10382" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10386:11234" ph="открытие бд" />
+            <marker date="1486409603000" expanded="true" signature="10431:10709" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10443:10638" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10662:10705" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="10775:11221" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11260:11478" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11323:11474" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="11480:11816" ph="/* private static DataSet ConvertByteArrayToDataSet(byte[] byteDataArray) ... */" />
+            <marker date="1486409603000" expanded="true" signature="11894:12146" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12025:12121" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12224:12971" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12342:12967" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12420:12941" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12596:12935" ph="{...}" />
+            <marker date="1486409603000" expanded="true" signature="12725:12795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
