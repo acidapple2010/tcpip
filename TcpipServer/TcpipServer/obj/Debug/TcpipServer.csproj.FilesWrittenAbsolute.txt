@@ -1,0 +1,7 @@
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.Server.resources
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.Properties.Resources.resources
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe.mdb
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe.mdb

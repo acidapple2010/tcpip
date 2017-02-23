@@ -27,6 +27,7 @@ namespace TcpipClient
 		DataSet dspar;
 		String clChangeFlag;
 		string filename_dbinp = @"../../../inpar_Kulygin_2.sqlite";
+        string filename_db_client = @"../../../db_for_client.sqlite";
 
         public Cleint()
         {

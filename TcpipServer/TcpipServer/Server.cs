@@ -20,7 +20,9 @@ namespace TcpipServer
 		TcpClient mTcpClient;
 		byte[] mRx;
 		SqliteConnection connpar;
-		DataSet dspar;
+		DataSet dataset_serv = new DataSet();
+		DataSet dataset_inp = new DataSet();
+
 		string svChangeFlag, svChangeNum;
 		string filename_dbinp = @"../../../inpar_Kulygin_1.sqlite";
 		string filename_db_server = @"../../../db_for_server.sqlite";
@@ -146,7 +148,7 @@ namespace TcpipServer
 				mTcpClient = tcpl.EndAcceptTcpClient(iar);
 
 				OpenData();
-				GetIndex();
+				GetFlagChange();
 				var tx = Encoding.Unicode.GetBytes(svChangeFlag);
 				mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
 
@@ -248,44 +250,33 @@ namespace TcpipServer
 
 			try
 			{
-				connpar = new SqliteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;");
-				connpar.Open();
-				dspar = DataSetParsLoader(connpar);
-				connpar.Close();
+				ConnectionToDB connect_server = new ConnectionToDB(filename_db_server);
+				dataset_serv.Clear();
+				dataset_serv = connect_server.DataSetDB("LST_CHANGE",dataset_serv);
+				dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
+
+				ConnectionToDB connect = new ConnectionToDB(filename_dbinp);
+				dataset_inp.Clear();
+				dataset_inp = connect.DataSetDB("LST_INPAR", dataset_inp);
+				dataset_inp = connect.DataSetDB("LST_ITEM", dataset_inp);
+
 			}
 			catch (Exception ex)
 			{
 				PrintLine(ex.Message);
 			}
 		}
-
-		private DataSet DataSetParsLoader(SqliteConnection connection)
-		{
-			var dataset = new DataSet();
-
-			string sqlcmd = "select * from LST_INPAR";
-			var da = new SqliteDataAdapter(sqlcmd, connection);
-			da.Fill(dataset, "LST_INPAR");
-
-			sqlcmd = "select * from LST_ITEM";
-			da = new SqliteDataAdapter(sqlcmd, connection);
-			da.Fill(dataset, "LST_ITEM");
-
-			sqlcmd = "select * from LST_CHANGE";
-			da = new SqliteDataAdapter(sqlcmd, connection);
-			da.Fill(dataset, "LST_CHANGE");
-
-			return dataset;
-		}
 		#endregion
 
-		public void GetIndex()
+		public void GetFlagChange()
 		{
-			foreach (DataRow dr in dspar.Tables["LST_CHANGE"].Rows)
+			foreach (DataRow dr in dataset_serv.Tables["LST_CHANGE"].Rows)
 			{
 				svChangeFlag = dr["CHANGE"].ToString();
-				svChangeNum = dr["CHANGENUM"].ToString();
-				PrintLine(svChangeFlag + " / " + svChangeNum);
+				if (svChangeFlag.Equals("False"))
+					PrintLine("Можно обновлять.");
+				else
+					PrintLine("Нельзя обновлять.");
 			}
 		}
 
