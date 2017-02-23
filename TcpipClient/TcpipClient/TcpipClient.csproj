@@ -56,6 +56,7 @@
     <Compile Include="Cleint.Designer.cs">
       <DependentUpon>Cleint.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionToDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cleint.resx">

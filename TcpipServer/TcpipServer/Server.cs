@@ -253,13 +253,13 @@ namespace TcpipServer
 				ConnectionToDB connect_server = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
 				dataset_serv = connect_server.DataSetDB("LST_CHANGE",dataset_serv);
-				dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
+				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 
-				ConnectionToDB connect = new ConnectionToDB(filename_dbinp);
+				/*ConnectionToDB connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
 				dataset_inp = connect.DataSetDB("LST_INPAR", dataset_inp);
 				dataset_inp = connect.DataSetDB("LST_ITEM", dataset_inp);
-
+				*/
 			}
 			catch (Exception ex)
 			{

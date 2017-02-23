@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Mono.Data.Sqlite;
 
 namespace TcpipServer
@@ -23,17 +22,6 @@ namespace TcpipServer
 			da.Fill(dataset, name_table);
 
 			return dataset;
-		}
-
-		public void getChangeNum(string name_table, DataSet dataset)
-		{
-			connection.Open();
-			var sqlcmd = "select * from " + name_table;
-			var da = new SqliteDataAdapter(sqlcmd, connection);
-			connection.Close();
-
-			da.Fill(dataset, name_table);
-
 		}
 	}
 }
