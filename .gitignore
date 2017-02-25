@@ -1,8 +1,8 @@
-# Ignore (generated) files and dll
+# Ignore (generated) files
 .sqlite
 .exe
 .mdb
-.dll
 .suo
 .resources
 .txt
+.userprefs
