@@ -17,9 +17,10 @@ namespace TcpipClient
     {
         TcpClient mTcpClient;
         byte[] mRx, tx, txSize;
-        //Name in ChatBox
         static string strName;
 
+        string strRecvSize { get; set; }
+        bool updateTable { get; set; }
         //When connected, prevent from editing ip address port and name
 		//При подключении, предотвратить от редактирования IP-адрес, порт и имя
         bool isAvailableToWrite = true;
@@ -129,10 +130,12 @@ namespace TcpipClient
             if (isAvailableToWrite)
             {
                 connectionGroup.Enabled = true;
+				actionsGroup.Enabled = true;
             }
             else if (!isAvailableToWrite)
             {
                 connectionGroup.Enabled = false;
+				actionsGroup.Enabled = false;
             }
         }
 
@@ -158,17 +161,15 @@ namespace TcpipClient
                 tcpc = (TcpClient)iar.AsyncState;
                 tcpc.EndConnect(iar);
 
-				//пошлем детали клиента к серверу
-                tx = Encoding.Unicode.GetBytes("Client has been connected. \r\nClient Name: " + strName + "\r\n"
-                + "Clients IP Address: " + ipa.ToString() + "\r\n");
-                
+				//пошлем детали клиента к серверу ()
+                tx = Encoding.Unicode.GetBytes("Client has been connected. \nClient Name: " + strName + "\n"
+                + "Clients IP Address: " + ipa.ToString() + "\n");
                 txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
-                mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToServer, mTcpClient);
-
-                mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToServer, mTcpClient);
+                mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToServerStream, mTcpClient);
+                mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToServerStream, mTcpClient);
 
                 //начинаем слушать отклики со стороны сервера на стороне клиента
-                mRx = new byte[254];
+                mRx = new byte[2];
                 tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, onCompleteReadFromServerStream, tcpc);
             }
             catch (Exception ex)
@@ -183,28 +184,86 @@ namespace TcpipClient
         void onCompleteReadFromServerStream(IAsyncResult iar)
         {
             TcpClient tcpc;
-            int nCountBytesReceivedFromServer;
-            string strReceived;
+            int nCountReadBytes;
+            string strRecv;
 
             try
             {
 				//проверяем, если байты были получены от сервера
                 tcpc = (TcpClient)iar.AsyncState;
-                nCountBytesReceivedFromServer = tcpc.GetStream().EndRead(iar);
+                nCountReadBytes = tcpc.GetStream().EndRead(iar);
 
 				//проверерка на отправку пустоты
-                if (nCountBytesReceivedFromServer == 0)
+                if (nCountReadBytes == 0)
                 {
 					//если пусто, соединение разрывается
                     MessageBox.Show("Connection broken, retry connecting to the server!", "TCP/IP Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                //если что-то есть, то мы храним данные в strReceived и выводим на экран 
-				strReceived = Encoding.Unicode.GetString(mRx, 0, nCountBytesReceivedFromServer);
-				printLine(strReceived);
-				clChangeFlag = strReceived;
-				mRx = new byte[254];
+                //если что-то есть, то мы храним данные в strReceived и выводим на экран
+				strRecv = Encoding.Unicode.GetString(mRx, 0, nCountReadBytes);
+                switch (strRecv)
+                {
+                    case " ":
+                        mRx = new byte[254];
+                        strRecvSize = null;
+                        break;
+
+                    case "-":
+                        mRx = new byte[Convert.ToInt32(strRecvSize)];
+                        strRecvSize = null;
+                        break;
+
+                    case "+":
+                        mRx = new byte[2];
+//                        OpenData();
+//                        tx = Encoding.Unicode.GetBytes(svChangeFlag);
+//                        txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
+//                        mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
+//                        mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
+                        strRecvSize = null;
+                        break;
+
+                    default:
+                        if (nCountReadBytes == 2)
+                            strRecvSize += strRecv;
+                        else if (updateTable)
+                        {
+//                            UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
+                            updateTable = false;
+                        }
+                        mRx = new byte[2];
+                        break;
+                }
+
+                /*if (strRecv.Equals("-") || strRecv.Equals(" "))
+                {
+                    if (!strRecvSize.Equals(null))
+                    {
+                        mRx = new byte[Convert.ToInt32(strRecvSize)];
+                        strRecvSize = null;
+                    }
+                    else
+                        mRx = new byte[254];
+                    //- для понимания, что этот массив байт таблица, которую нужно обновить
+                    updateTable |= strRecv.Equals("-");
+                }
+                else
+                {
+                    if (nCountReadBytes == 2)
+                        strRecvSize += strRecv;
+                    else if (updateTable)
+                    {
+                        UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
+                        updateTable = false;
+                    }
+                    mRx = new byte[2];
+                }*/
+
+				printLine(strRecv);
+//				clChangeFlag = strRecv;
+//				mRx = new byte[254];
 				tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, onCompleteReadFromServerStream, tcpc);
             }
             catch (Exception ex)
@@ -215,7 +274,7 @@ namespace TcpipClient
         }
 
 		//делаем, если написано на сервер
-        void onCompleteWriteToServer(IAsyncResult iar)
+        void onCompleteWriteToServerStream(IAsyncResult iar)
         {
             TcpClient tcpc;
             try
@@ -260,7 +319,7 @@ namespace TcpipClient
             {
                 if (mTcpClient.Client.Connected)
                 {
-                    mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToServer, mTcpClient);
+                    mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToServerStream, mTcpClient);
                     printLine("send to server " + tx.Length);
                 }
                 else if (!mTcpClient.Client.Connected)
@@ -306,11 +365,11 @@ namespace TcpipClient
 
 			try
 			{
-			    var connect_client = new ConnectionToDB(filename_db_client);
+			    var connectClient = new ConnectionToDB(filename_db_client);
 			    dataset_client.Clear();
 			    name_table = "LST_CHANGE";
 			    sqlcmd = "select * from " + name_table;
-			    dataset_client = connect_client.DataSetSelect(name_table, dataset_client, sqlcmd);
+			    dataset_client = connectClient.DataSetSelect(name_table, dataset_client, sqlcmd);
 //				connpar = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;");
 //				connpar.Open();
 //				dspar = DataSetParsLoader(connpar);
@@ -325,7 +384,9 @@ namespace TcpipClient
 
         private void btnLocking_Click(object sender, EventArgs e)
         {
-
+			//получить от сервера ключ на возможньсть обработки бд
+            tx = Encoding.Unicode.GetBytes("+");
+            send_to_server(tx);
         }
     }
 }

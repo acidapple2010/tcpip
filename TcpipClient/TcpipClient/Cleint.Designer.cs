@@ -181,6 +181,7 @@
             this.actionsGroup.TabIndex = 13;
             this.actionsGroup.TabStop = false;
             this.actionsGroup.Text = "Actions";
+			this.actionsGroup.Enabled = false;
             // 
             // Cleint
             // 

@@ -18,14 +18,16 @@ namespace TcpipServer
 		
 		TcpListener mTcpListener;
 		TcpClient mTcpClient;
-		byte[] mRx;
-		//SqliteConnection connpar;
+		byte[] mRx, tx, txSize;
 		string name_table;
 		string sqlcmd;
-		DataSet dataset_serv = new DataSet();
-		DataSet dataset_inp = new DataSet();
+		string strRecvSize { get; set; }
+		bool updateTable { get; set; }
 
-		string svChangeFlag, svChangeNum;
+		static DataSet dataset_serv = new DataSet();
+		//static DataSet dataset_inp = new DataSet();
+
+		//string svChangeNum;
 		string filename_dbinp = @"../../../inpar_Kulygin_1.sqlite";
 		string filename_db_server = @"../../../db_for_server.sqlite";
 
@@ -149,9 +151,13 @@ namespace TcpipServer
 				//ловим каждый AsyncCall так, что соединение принимается непрерывно
 				mTcpClient = tcpl.EndAcceptTcpClient(iar);
 
-				OpenData();
-				GetFlagChange();
-				var tx = Encoding.Unicode.GetBytes(svChangeFlag);
+				//OpenData();
+				//GetFlagChange();
+				//var tx = Encoding.Unicode.GetBytes(svChangeFlag);
+				//пошлем детали клиента к серверу
+				tx = Encoding.Unicode.GetBytes("You has been connected to server. \nIP address: " + tbIPAddress.Text + "\n");
+				txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
+				mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
 				mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
 
 				//в то время как один клиент подключен, мы можем позволить другим клиентам подключить
@@ -168,8 +174,6 @@ namespace TcpipServer
 			}
 		}
 
-		bool updateTable;
-		string strRecvSize;
 		//читаем поток данных
 		void OnCompleteReadFromTcpClientStream(IAsyncResult iar)
 		{
@@ -193,13 +197,46 @@ namespace TcpipServer
 				}
 
 				//обновляем полученные таблицы в базе 
-				//UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
 				strRecv = Encoding.Unicode.GetString(mRx, 0, nCountReadBytes);
-
-				//что-то придумать насчет большого количества передаваемых байтов в пакете, 
-				//очищаем буфер, поэтому клиенты могут непрерывно посылать пакеты
-				if (strRecv.Equals("-") || strRecv.Equals(" "))
+				switch (strRecv)
 				{
+					case " ":
+						mRx = new byte[254];
+						strRecvSize = null;
+						break;
+
+					case "-":
+						mRx = new byte[Convert.ToInt32(strRecvSize)];
+						strRecvSize = null;
+						break;
+
+					case "+":
+						mRx = new byte[2];
+						OpenData();
+						var svChangeFlag = GetFlagChange();
+						tx = Encoding.Unicode.GetBytes(svChangeFlag);
+						txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
+						mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
+						mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
+
+						strRecvSize = null;
+						break;
+
+					default:
+						if (nCountReadBytes == 2)
+							strRecvSize += strRecv;
+						else if (updateTable)
+						{
+							UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
+							updateTable = false;
+						}
+						mRx = new byte[2];
+						break;
+				}
+
+				/*if (strRecv.Equals("-") || strRecv.Equals(" "))
+				{
+					}
 					if (!strRecvSize.Equals(null))
 					{
 						mRx = new byte[Convert.ToInt32(strRecvSize)];
@@ -221,6 +258,7 @@ namespace TcpipServer
 					}
 					mRx = new byte[2];
 				}
+				*/
 				PrintLine(strRecv);
 				tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromTcpClientStream, tcpc);
 
@@ -252,14 +290,14 @@ namespace TcpipServer
 
 			try
 			{
-				ConnectionToDB connect_server = new ConnectionToDB(filename_db_server);
+				var conToDb = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
 				name_table = "LST_CHANGE"; 
 				sqlcmd = "select * from " + name_table; 
-				dataset_serv = connect_server.DataSetSelect(name_table, dataset_serv, sqlcmd);
+				dataset_serv = conToDb.DataSetSelect(name_table, dataset_serv, sqlcmd);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 
-				/*ConnectionToDB connect = new ConnectionToDB(filename_dbinp);
+				/*var connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
 				dataset_inp = connect.DataSetDB("LST_INPAR", dataset_inp);
 				dataset_inp = connect.DataSetDB("LST_ITEM", dataset_inp);
@@ -272,16 +310,18 @@ namespace TcpipServer
 		}
 		#endregion
 
-		public void GetFlagChange()
+		public string GetFlagChange()
 		{
+			string changeFlag = null;
 			foreach (DataRow dr in dataset_serv.Tables["LST_CHANGE"].Rows)
 			{
-				svChangeFlag = dr["CHANGE"].ToString();
-				if (svChangeFlag.Equals("False"))
+				changeFlag = dr["CHANGE"].ToString();
+				if (changeFlag.Equals("True"))
 					PrintLine("Можно обновлять.");
 				else
 					PrintLine("Нельзя обновлять.");
 			}
+			return changeFlag;
 		}
 
 		private static DataTable ConvertByteArrayToDataTable(byte[] byteDataArray)

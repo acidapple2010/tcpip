@@ -6,3 +6,5 @@
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipClient/TcpipClient/obj/Debug/TcpipClient.exe
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipClient/TcpipClient/obj/Debug/TcpipClient.exe.mdb
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipClient/TcpipClient/bin/Debug/System.Data.SQLite.dll
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipClient/TcpipClient/bin/Debug/TcpipClient.pdb
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipClient/TcpipClient/obj/Debug/TcpipClient.pdb
