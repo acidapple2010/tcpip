@@ -12,10 +12,10 @@ namespace TcpipServer
 			connection = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;");
 		}
 
-		public DataSet DataSetDB(string name_table, DataSet dataset)
+		public DataSet DataSetDB(string name_table, DataSet dataset, string sqlcmd)
 		{
 			connection.Open();
-			var sqlcmd = "select * from " + name_table;
+			//var cmd = "select * from " + name_table;
 			var da = new SqliteDataAdapter(sqlcmd, connection);
 			connection.Close();
 

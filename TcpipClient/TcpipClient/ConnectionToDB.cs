@@ -12,15 +12,12 @@ namespace TcpipClient
             connection = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;");
         }
 
-        public DataSet DataSetDB(string name_table, DataSet dataset)
+        public DataSet DataSetSelect(string name_table, DataSet dataset, string sqlcmd)
         {
             connection.Open();
-            var sqlcmd = "select * from " + name_table;
             var da = new SQLiteDataAdapter(sqlcmd, connection);
             connection.Close();
-
             da.Fill(dataset, name_table);
-
             return dataset;
         }
     }

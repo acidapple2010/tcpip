@@ -19,7 +19,9 @@ namespace TcpipServer
 		TcpListener mTcpListener;
 		TcpClient mTcpClient;
 		byte[] mRx;
-		SqliteConnection connpar;
+		//SqliteConnection connpar;
+		string name_table;
+		string sqlcmd;
 		DataSet dataset_serv = new DataSet();
 		DataSet dataset_inp = new DataSet();
 
@@ -252,7 +254,9 @@ namespace TcpipServer
 			{
 				ConnectionToDB connect_server = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
-				dataset_serv = connect_server.DataSetDB("LST_CHANGE",dataset_serv);
+				name_table = "LST_CHANGE"; 
+				sqlcmd = "select * from " + name_table; 
+				dataset_serv = connect_server.DataSetSelect(name_table, dataset_serv, sqlcmd);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 
 				/*ConnectionToDB connect = new ConnectionToDB(filename_dbinp);

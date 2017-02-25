@@ -26,6 +26,9 @@ namespace TcpipClient
 		SQLiteConnection connpar;
 		DataSet dspar;
 		String clChangeFlag;
+        DataSet dataset_client = new DataSet();
+        string name_table;
+        string sqlcmd;
 		string filename_dbinp = @"../../../inpar_Kulygin_2.sqlite";
         string filename_db_client = @"../../../db_for_client.sqlite";
 
@@ -305,10 +308,15 @@ namespace TcpipClient
 
 			try
 			{
-				connpar = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;");
-				connpar.Open();
-				dspar = DataSetParsLoader(connpar);
-				connpar.Close();
+			    var connect_client = new ConnectionToDB(filename_db_client);
+			    dataset_client.Clear();
+			    name_table = "LST_CHANGE";
+			    sqlcmd = "select * from " + name_table;
+			    dataset_client = connect_client.DataSetSelect(name_table, dataset_client, sqlcmd);
+//				connpar = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;");
+//				connpar.Open();
+//				dspar = DataSetParsLoader(connpar);
+//				connpar.Close();
 			}
 			catch (Exception ex)
 			{
