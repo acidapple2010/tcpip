@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.TcpipServer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="TcpipServer/Server.cs">
     <Files>
-      <File FileName="TcpipServer/Server.cs" Line="248" Column="26" />
-      <File FileName="TcpipServer/ConnectionToDB.cs" Line="26" Column="1" />
+      <File FileName="TcpipServer/Server.cs" Line="261" Column="5" />
+      <File FileName="TcpipServer/ConnectionToDB.cs" Line="15" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
