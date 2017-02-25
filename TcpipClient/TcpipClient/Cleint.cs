@@ -23,8 +23,6 @@ namespace TcpipClient
         //When connected, prevent from editing ip address port and name
 		//При подключении, предотвратить от редактирования IP-адрес, порт и имя
         bool isAvailableToWrite = true;
-		SQLiteConnection connpar;
-		DataSet dspar;
 		String clChangeFlag;
         DataSet dataset_client = new DataSet();
         string name_table;
@@ -248,7 +246,7 @@ namespace TcpipClient
             byte[] tx, txSize;
             OpenData();
 
-            tx = ConvertDataToByteArray(dspar.Tables["LST_ITEM"]);
+            tx = ConvertDataToByteArray(dataset_client.Tables["LST_ITEM"]);
             txSize = Encoding.Unicode.GetBytes(tx.Length + "-");
 
             send_to_server(txSize);
@@ -324,5 +322,10 @@ namespace TcpipClient
 			}
 		}
 		#endregion
+
+        private void btnLocking_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

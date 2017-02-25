@@ -40,8 +40,11 @@
             this.tbConsoleOut = new System.Windows.Forms.RichTextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
+            this.btnLocking = new System.Windows.Forms.Button();
+            this.actionsGroup = new System.Windows.Forms.GroupBox();
             this.connectionGroup.SuspendLayout();
             this.groupBoxLst.SuspendLayout();
+            this.actionsGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // connectionGroup
@@ -139,7 +142,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(189, 143);
+            this.btnSend.Location = new System.Drawing.Point(9, 91);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(99, 30);
             this.btnSend.TabIndex = 1;
@@ -149,7 +152,7 @@
             // 
             // btnClean
             // 
-            this.btnClean.Location = new System.Drawing.Point(12, 143);
+            this.btnClean.Location = new System.Drawing.Point(9, 55);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(99, 30);
             this.btnClean.TabIndex = 2;
@@ -157,14 +160,35 @@
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnChange_Request_Click);
             // 
+            // btnLocking
+            // 
+            this.btnLocking.Location = new System.Drawing.Point(9, 19);
+            this.btnLocking.Name = "btnLocking";
+            this.btnLocking.Size = new System.Drawing.Size(99, 30);
+            this.btnLocking.TabIndex = 12;
+            this.btnLocking.Text = "Locking";
+            this.btnLocking.UseVisualStyleBackColor = true;
+            this.btnLocking.Click += new System.EventHandler(this.btnLocking_Click);
+            // 
+            // actionsGroup
+            // 
+            this.actionsGroup.Controls.Add(this.btnLocking);
+            this.actionsGroup.Controls.Add(this.btnSend);
+            this.actionsGroup.Controls.Add(this.btnClean);
+            this.actionsGroup.Location = new System.Drawing.Point(12, 134);
+            this.actionsGroup.Name = "actionsGroup";
+            this.actionsGroup.Size = new System.Drawing.Size(287, 176);
+            this.actionsGroup.TabIndex = 13;
+            this.actionsGroup.TabStop = false;
+            this.actionsGroup.Text = "Actions";
+            // 
             // Cleint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 314);
-            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.actionsGroup);
             this.Controls.Add(this.groupBoxLst);
-            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.connectionGroup);
             this.Name = "Cleint";
             this.Text = "Client";
@@ -172,6 +196,7 @@
             this.connectionGroup.ResumeLayout(false);
             this.connectionGroup.PerformLayout();
             this.groupBoxLst.ResumeLayout(false);
+            this.actionsGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,6 +215,8 @@
         private System.Windows.Forms.RichTextBox tbConsoleOut;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.Button btnLocking;
+        private System.Windows.Forms.GroupBox actionsGroup;
     }
 }
 
