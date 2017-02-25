@@ -323,21 +323,6 @@ namespace TcpipClient
 				MessageBox.Show(ex.Message);
 			}
 		}
-
-		private DataSet DataSetParsLoader(SQLiteConnection connection)
-		{
-			var dataset = new DataSet();
-
-			string sqlcmd = "select * from LST_INPAR";
-			var da = new SQLiteDataAdapter(sqlcmd, connection);
-			da.Fill(dataset, "LST_INPAR");
-
-			sqlcmd = "select * from LST_ITEM";
-			da = new SQLiteDataAdapter(sqlcmd, connection);
-			da.Fill(dataset, "LST_ITEM");
-
-			return dataset;
-		}
 		#endregion
     }
 }

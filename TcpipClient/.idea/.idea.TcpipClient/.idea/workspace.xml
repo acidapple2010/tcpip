@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="685a4e86-d542-4e74-9da6-1041b59f9191" name="Default" comment="" />
+    <list default="true" id="685a4e86-d542-4e74-9da6-1041b59f9191" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TcpipClient/Cleint.cs" afterPath="$PROJECT_DIR$/TcpipClient/Cleint.cs" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,58 +17,57 @@
       <file leaf-file-name="Cleint.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="310" column="50" lean-forward="true" selection-start-line="310" selection-start-column="50" selection-end-line="310" selection-end-column="50" />
+            <state relative-caret-position="472">
+              <caret line="324" column="9" lean-forward="true" selection-start-line="324" selection-start-column="9" selection-end-line="324" selection-end-column="9" />
               <folding>
-                <marker date="1488009936000" expanded="true" signature="6:289" ph="..." />
-                <marker date="1488009936000" expanded="true" signature="312:11667" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="353:11665" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
-                <marker date="1488009936000" expanded="true" signature="988:1118" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="1256:2661" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="1532:2400" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="2077:2385" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="2235:2367" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="2422:2623" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="2728:4393" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="2936:4213" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="3084:3301" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="3422:3622" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="3688:3823" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="3880:3959" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="4247:4382" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="4478:4729" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="4524:4600" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="4642:4719" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="4842:6450" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="5221:6136" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="6169:6440" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="6540:7849" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="6674:7587" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="6964:7222" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="7620:7839" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="7941:8373" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="7995:8194" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="8228:8363" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="8421:8514" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="8561:8665" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="8729:9072" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9120:9763" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9241:9753" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9304:9512" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9567:9739" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9837:10173" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
-                <marker date="1488009936000" expanded="true" signature="10024:10035" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10059:10163" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10309:10656" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10464:10609" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10660:11659" ph="открытие бд" />
-                <marker date="1488009936000" expanded="true" signature="10705:11261" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10717:11190" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
-                <marker date="1488009936000" expanded="true" signature="11214:11257" ph="{...}" />
-                <marker date="1488009936000" expanded="true" signature="11327:11646" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="6:289" ph="..." />
+                <marker date="1488010519000" expanded="true" signature="312:11282" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="353:11280" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
+                <marker date="1488010519000" expanded="true" signature="988:1118" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="1256:2661" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="1532:2400" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="2077:2385" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="2235:2367" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="2422:2623" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="2728:4393" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="2936:4213" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="3084:3301" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="3422:3622" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="3688:3823" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="3880:3959" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="4247:4382" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="4478:4729" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="4524:4600" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="4642:4719" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="4842:6450" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="5221:6136" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="6169:6440" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="6540:7849" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="6674:7587" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="6964:7222" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="7620:7839" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="7941:8373" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="7995:8194" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="8228:8363" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="8421:8514" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="8561:8665" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="8729:9072" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9120:9763" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9241:9753" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9304:9512" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9567:9739" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9837:10173" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
+                <marker date="1488010519000" expanded="true" signature="10024:10035" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10059:10163" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10309:10656" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10464:10609" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10660:11274" ph="открытие бд" />
+                <marker date="1488010519000" expanded="true" signature="10705:11261" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10717:11190" ph="{...}" />
+                <marker date="1488010519000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
+                <marker date="1488010519000" expanded="true" signature="11214:11257" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -225,12 +226,12 @@
       <workItem from="1487859547018" duration="21000" />
       <workItem from="1487859838526" duration="244000" />
       <workItem from="1487860875238" duration="3647000" />
-      <workItem from="1487878677816" duration="1699000" />
+      <workItem from="1487878677816" duration="2238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5838000" />
+    <option name="totallyTimeSpent" value="6377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -242,11 +243,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="547" y="22" width="732" height="726" extended-state="1" />
+    <frame x="547" y="22" width="732" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2768116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2768116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -286,55 +287,54 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488009936000" expanded="true" signature="6:289" ph="..." />
-            <marker date="1488009936000" expanded="true" signature="312:11667" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="353:11665" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
-            <marker date="1488009936000" expanded="true" signature="988:1118" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="1256:2661" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="1532:2400" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2077:2385" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2235:2367" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2422:2623" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2728:4393" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2936:4213" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3084:3301" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3422:3622" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3688:3823" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3880:3959" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4247:4382" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4478:4729" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4524:4600" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4642:4719" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4842:6450" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="5221:6136" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6169:6440" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6540:7849" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6674:7587" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6964:7222" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7620:7839" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7941:8373" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7995:8194" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8228:8363" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8421:8514" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8561:8665" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8729:9072" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9120:9763" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9241:9753" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9304:9512" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9567:9739" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9837:10173" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
-            <marker date="1488009936000" expanded="true" signature="10024:10035" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10059:10163" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10309:10656" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10464:10609" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10660:11659" ph="открытие бд" />
-            <marker date="1488009936000" expanded="true" signature="10705:11261" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10717:11190" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
-            <marker date="1488009936000" expanded="true" signature="11214:11257" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="11327:11646" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6:289" ph="..." />
+            <marker date="1488010519000" expanded="true" signature="312:11282" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="353:11280" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
+            <marker date="1488010519000" expanded="true" signature="988:1118" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="1256:2661" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="1532:2400" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2077:2385" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2235:2367" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2422:2623" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2728:4393" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2936:4213" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3084:3301" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3422:3622" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3688:3823" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3880:3959" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4247:4382" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4478:4729" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4524:4600" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4642:4719" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4842:6450" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="5221:6136" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6169:6440" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6540:7849" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6674:7587" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6964:7222" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7620:7839" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7941:8373" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7995:8194" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8228:8363" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8421:8514" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8561:8665" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8729:9072" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9120:9763" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9241:9753" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9304:9512" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9567:9739" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9837:10173" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
+            <marker date="1488010519000" expanded="true" signature="10024:10035" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10059:10163" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10309:10656" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10464:10609" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10660:11274" ph="открытие бд" />
+            <marker date="1488010519000" expanded="true" signature="10705:11261" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10717:11190" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
+            <marker date="1488010519000" expanded="true" signature="11214:11257" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -393,58 +393,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="310" column="50" lean-forward="true" selection-start-line="310" selection-start-column="50" selection-end-line="310" selection-end-column="50" />
+        <state relative-caret-position="472">
+          <caret line="324" column="9" lean-forward="true" selection-start-line="324" selection-start-column="9" selection-end-line="324" selection-end-column="9" />
           <folding>
-            <marker date="1488009936000" expanded="true" signature="6:289" ph="..." />
-            <marker date="1488009936000" expanded="true" signature="312:11667" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="353:11665" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
-            <marker date="1488009936000" expanded="true" signature="988:1118" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="1256:2661" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="1532:2400" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2077:2385" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2235:2367" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2422:2623" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2728:4393" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="2936:4213" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3084:3301" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3422:3622" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3688:3823" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="3880:3959" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4247:4382" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4478:4729" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4524:4600" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4642:4719" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="4842:6450" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="5221:6136" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6169:6440" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6540:7849" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6674:7587" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="6964:7222" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7620:7839" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7941:8373" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="7995:8194" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8228:8363" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8421:8514" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8561:8665" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="8729:9072" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9120:9763" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9241:9753" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9304:9512" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9567:9739" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9837:10173" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
-            <marker date="1488009936000" expanded="true" signature="10024:10035" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10059:10163" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10309:10656" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10464:10609" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10660:11659" ph="открытие бд" />
-            <marker date="1488009936000" expanded="true" signature="10705:11261" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10717:11190" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
-            <marker date="1488009936000" expanded="true" signature="11214:11257" ph="{...}" />
-            <marker date="1488009936000" expanded="true" signature="11327:11646" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6:289" ph="..." />
+            <marker date="1488010519000" expanded="true" signature="312:11282" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="353:11280" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="488:625" ph="/* When connected, prevent from editing ip address port and name ... */" />
+            <marker date="1488010519000" expanded="true" signature="988:1118" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="1256:2661" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="1532:2400" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2077:2385" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2235:2367" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2422:2623" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2728:4393" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="2936:4213" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3084:3301" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3422:3622" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3688:3823" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="3880:3959" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4247:4382" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4478:4729" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4524:4600" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4642:4719" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="4842:6450" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="5221:6136" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6169:6440" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6540:7849" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6674:7587" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="6964:7222" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7620:7839" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7941:8373" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="7995:8194" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8228:8363" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8421:8514" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8561:8665" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="8729:9072" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9120:9763" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9241:9753" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9304:9512" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9567:9739" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9837:10173" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="9860:10000" ph="/* принять данные о возможности на изменения таблиц ... */" />
+            <marker date="1488010519000" expanded="true" signature="10024:10035" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10059:10163" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10309:10656" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10464:10609" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10660:11274" ph="открытие бд" />
+            <marker date="1488010519000" expanded="true" signature="10705:11261" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10717:11190" ph="{...}" />
+            <marker date="1488010519000" expanded="true" signature="10993:11185" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
+            <marker date="1488010519000" expanded="true" signature="11214:11257" ph="{...}" />
           </folding>
         </state>
       </provider>
