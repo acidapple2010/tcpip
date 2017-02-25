@@ -1,3 +1,4 @@
+# Ignore (generated) files and dll
 .sqlite
 .exe
 .mdb
