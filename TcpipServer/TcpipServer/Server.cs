@@ -165,7 +165,7 @@ namespace TcpipServer
 
 				//установливаем количество разрешенных по умолчанию байт
 				mRx = new byte[2];
-				mTcpClient.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromTcpClientStream, mTcpClient);
+				mTcpClient.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromClientStream, mTcpClient);
 
 			}
 			catch (Exception ex)
@@ -175,7 +175,7 @@ namespace TcpipServer
 		}
 
 		//читаем поток данных
-		void OnCompleteReadFromTcpClientStream(IAsyncResult iar)
+		void OnCompleteReadFromClientStream(IAsyncResult iar)
 		{
 			TcpClient tcpc;
 			int nCountReadBytes = 0;
@@ -212,15 +212,46 @@ namespace TcpipServer
 
 					case "+":
 						mRx = new byte[2];
-						//strRecvSize и есть флаг
-						SelectDataChange();
-						var svChangeFlag = GetFlagChange();
-						UpdateLocking(svChangeFlag);
+						string flagToClient;
+						//считали с бд сервера флаг блокироки
+						var svLockingFlag = GetFlagLock();
 
-						tx = Encoding.Unicode.GetBytes(svChangeFlag.ToString());
-						txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
-						mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
-						mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
+						//блокировка
+						if (strRecvSize.Equals("0"))
+						{
+						    if (!svLockingFlag)
+						    {
+						        flagToClient = "1";
+						        UpdateLocking(1);
+						    }
+						    else
+						        flagToClient = "Сервер заблокирован другим пользователем";
+						}
+						//разблокировка
+						else
+						{
+							if (svLockingFlag)
+							{
+								flagToClient = "0";
+								UpdateLocking(0);
+
+							}
+							else
+								flagToClient = "Ошибка блокировки";
+						}
+
+					    if (flagToClient.Length != 1)
+					    {
+					        tx = Encoding.Unicode.GetBytes(flagToClient);
+					        txSize = Encoding.Unicode.GetBytes(tx.Length + "+");
+					        mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
+					        mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
+					    }
+					    else
+					    {
+					        tx = Encoding.Unicode.GetBytes(flagToClient + "+");
+					        mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
+					    }
 
 						strRecvSize = null;
 						break;
@@ -237,33 +268,8 @@ namespace TcpipServer
 						break;
 				}
 
-				/*if (strRecv.Equals("-") || strRecv.Equals(" "))
-				{
-					}
-					if (!strRecvSize.Equals(null))
-					{
-						mRx = new byte[Convert.ToInt32(strRecvSize)];
-						strRecvSize = null;
-					}
-					else
-						mRx = new byte[254];
-					//- для понимания, что этот массив байт таблица, которую нужно обновить
-					updateTable |= strRecv.Equals("-");
-				}
-				else
-				{
-					if (nCountReadBytes == 2)
-						strRecvSize += strRecv;
-					else if (updateTable)
-					{
-						UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
-						updateTable = false;
-					}
-					mRx = new byte[2];
-				}
-				*/
 				PrintLine(strRecv);
-				tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromTcpClientStream, tcpc);
+				tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromClientStream, tcpc);
 
 			}
 			catch (Exception ex)
@@ -288,14 +294,13 @@ namespace TcpipServer
 		}
 
 		#region манипуляции с бд
-		private void SelectDataChange()
+		private void SelectDataLock()
 		{
-
 			try
 			{
 				var conToDb = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
-				name_table = "LST_CHANGE";
+				name_table = "LST_LOCK";
 				sqlcmd = "select * from " + name_table;
 				dataset_serv = conToDb.DSsqlcmdToDB(name_table, dataset_serv, sqlcmd);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
@@ -311,13 +316,13 @@ namespace TcpipServer
 			}
 		}
 
-		private void UpdateLocking(bool change)
+		private void UpdateLocking(int locking)
 		{
 			try
 			{
 				var conToDb = new ConnectionToDB(filename_db_server);
-				name_table = "LST_CHANGE";
-				sqlcmd = "update " + name_table + "set CHANGE = " + change;
+				name_table = "LST_LOCK";
+				sqlcmd = "update " + name_table + " set LOCK = " + locking;
 				conToDb.DSsqlcmdToDB(sqlcmd);
 			}
 			catch (Exception ex)
@@ -327,24 +332,24 @@ namespace TcpipServer
 		}
 		#endregion
 
-		public bool GetFlagChange()
+		public bool GetFlagLock()
 		{
-			bool changeFlag = false;
-			foreach (DataRow dr in dataset_serv.Tables["LST_CHANGE"].Rows)
+			var flag = false;
+			SelectDataLock();
+			foreach (DataRow dr in dataset_serv.Tables["LST_LOCK"].Rows)
 			{
-				if (dr["CHANGE"].ToString().Equals("True"))
+				if (dr["LOCK"].ToString().Equals("True"))
 				{
-					//обновить и послать 
-					changeFlag = true;
-					PrintLine("Можно обновлять.");
+					flag = true;
+					PrintLine("Заблокирована");
 				}
 				else
 				{
-					changeFlag = false;
-					PrintLine("Нельзя обновлять.");
+					flag = false;
+					PrintLine("Не заблокирована");
 				}
 			}
-			return changeFlag;
+			return flag;
 		}
 
 		#region махинации с таблицой

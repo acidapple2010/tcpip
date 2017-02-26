@@ -12,19 +12,20 @@ namespace TcpipClient
             connection = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;");
         }
 
-        public DataSet DSsqlcmdToDB(string name_table, DataSet dataset, string sqlcmd)
+        public DataSet DSsqlcmdToDB(string nameTable, DataSet dataset, string sqlcmd)
         {
             connection.Open();
             var da = new SQLiteDataAdapter(sqlcmd, connection);
             connection.Close();
-            da.Fill(dataset, name_table);
+            da.Fill(dataset, nameTable);
             return dataset;
         }
 
         public void DSsqlcmdToDB(string sqlcmd)
         {
             connection.Open();
-            var da = new SQLiteDataAdapter(sqlcmd, connection);
+            var command = new SQLiteCommand(sqlcmd, connection);
+            command.ExecuteNonQuery();
             connection.Close();
         }
     }

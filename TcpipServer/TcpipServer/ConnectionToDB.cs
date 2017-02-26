@@ -24,7 +24,8 @@ namespace TcpipServer
 		public void DSsqlcmdToDB(string sqlcmd)
 		{
 			connection.Open();
-			var da = new SqliteDataAdapter(sqlcmd, connection);
+			var command = new SqliteCommand(sqlcmd, connection);
+			command.ExecuteNonQuery();
 			connection.Close();
 		}
 	}
