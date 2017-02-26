@@ -24,7 +24,7 @@ namespace TcpipClient
         //When connected, prevent from editing ip address port and name
 		//При подключении, предотвратить от редактирования IP-адрес, порт и имя
         bool isAvailableToWrite = true;
-		String clChangeFlag;
+		string clChangeFlag;
         DataSet dataset_client = new DataSet();
         string name_table;
         string sqlcmd;
@@ -217,7 +217,7 @@ namespace TcpipClient
 
                     case "+":
                         mRx = new byte[2];
-//                        OpenData();
+//                        SelectDataChange();
 //                        tx = Encoding.Unicode.GetBytes(svChangeFlag);
 //                        txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
 //                        mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
@@ -303,13 +303,13 @@ namespace TcpipClient
         {            
             //возможность обновлять пока одну таблицу
             byte[] tx, txSize;
-            OpenData();
+//            SelectDataChange();
 
-            tx = ConvertDataToByteArray(dataset_client.Tables["LST_ITEM"]);
-            txSize = Encoding.Unicode.GetBytes(tx.Length + "-");
+//            tx = ConvertDataToByteArray(dataset_client.Tables["LST_ITEM"]);
+//            txSize = Encoding.Unicode.GetBytes(tx.Length + "-");
 
-            send_to_server(txSize);
-            send_to_server(tx);
+//            send_to_server(txSize);
+//            send_to_server(tx);
         }
 
         private void send_to_server(byte[] tx)
@@ -334,7 +334,7 @@ namespace TcpipClient
             //принять данные о возможности на изменения таблиц
             //и делать манипуляции с кнопкой и отправкой серверу согласие или не согласие
 
-			OpenData();
+			SelectDataChange();
 
 			try
 			{
@@ -360,16 +360,15 @@ namespace TcpipClient
         }
 
 		#region открытие бд
-		private void OpenData()
+		private void SelectDataChange()
 		{
-
 			try
 			{
-			    var connectClient = new ConnectionToDB(filename_db_client);
+			    var conToDb = new ConnectionToDB(filename_db_client);
 			    dataset_client.Clear();
 			    name_table = "LST_CHANGE";
 			    sqlcmd = "select * from " + name_table;
-			    dataset_client = connectClient.DataSetSelect(name_table, dataset_client, sqlcmd);
+			    dataset_client = conToDb.DSsqlcmdToDB(name_table, dataset_client, sqlcmd);
 //				connpar = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;");
 //				connpar.Open();
 //				dspar = DataSetParsLoader(connpar);
@@ -384,7 +383,10 @@ namespace TcpipClient
 
         private void btnLocking_Click(object sender, EventArgs e)
         {
-			//получить от сервера ключ на возможньсть обработки бд
+			//получить с базы ключ, послать серверу 1 - заблокировать, 0 - разблокировать
+            //получить от сервера ключ на возможньсть обновления бд
+            //если 1 - можно блокировать и обрабатывать, 0 - уже кем-то обрабатывается
+            SelectDataChange();
             tx = Encoding.Unicode.GetBytes("+");
             send_to_server(tx);
         }

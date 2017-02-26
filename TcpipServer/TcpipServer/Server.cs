@@ -15,7 +15,7 @@ namespace TcpipServer
 
 	public partial class Server : Form
 	{
-		
+
 		TcpListener mTcpListener;
 		TcpClient mTcpClient;
 		byte[] mRx, tx, txSize;
@@ -212,9 +212,12 @@ namespace TcpipServer
 
 					case "+":
 						mRx = new byte[2];
-						OpenData();
+						//strRecvSize и есть флаг
+						SelectDataChange();
 						var svChangeFlag = GetFlagChange();
-						tx = Encoding.Unicode.GetBytes(svChangeFlag);
+						UpdateLocking(svChangeFlag);
+
+						tx = Encoding.Unicode.GetBytes(svChangeFlag.ToString());
 						txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
 						mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
 						mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
@@ -281,22 +284,21 @@ namespace TcpipServer
 
 		private void btnClean_Click(object sender, EventArgs e)
 		{
-            tbConsoleOut.Clear();
+			tbConsoleOut.Clear();
 		}
 
-		#region открытие бд
-		private void OpenData()
+		#region манипуляции с бд
+		private void SelectDataChange()
 		{
 
 			try
 			{
 				var conToDb = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
-				name_table = "LST_CHANGE"; 
-				sqlcmd = "select * from " + name_table; 
-				dataset_serv = conToDb.DataSetSelect(name_table, dataset_serv, sqlcmd);
+				name_table = "LST_CHANGE";
+				sqlcmd = "select * from " + name_table;
+				dataset_serv = conToDb.DSsqlcmdToDB(name_table, dataset_serv, sqlcmd);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
-
 				/*var connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
 				dataset_inp = connect.DataSetDB("LST_INPAR", dataset_inp);
@@ -308,22 +310,44 @@ namespace TcpipServer
 				PrintLine(ex.Message);
 			}
 		}
+
+		private void UpdateLocking(bool change)
+		{
+			try
+			{
+				var conToDb = new ConnectionToDB(filename_db_server);
+				name_table = "LST_CHANGE";
+				sqlcmd = "update " + name_table + "set CHANGE = " + change;
+				conToDb.DSsqlcmdToDB(sqlcmd);
+			}
+			catch (Exception ex)
+			{
+				PrintLine(ex.Message);
+			}
+		}
 		#endregion
 
-		public string GetFlagChange()
+		public bool GetFlagChange()
 		{
-			string changeFlag = null;
+			bool changeFlag = false;
 			foreach (DataRow dr in dataset_serv.Tables["LST_CHANGE"].Rows)
 			{
-				changeFlag = dr["CHANGE"].ToString();
-				if (changeFlag.Equals("True"))
+				if (dr["CHANGE"].ToString().Equals("True"))
+				{
+					//обновить и послать 
+					changeFlag = true;
 					PrintLine("Можно обновлять.");
+				}
 				else
+				{
+					changeFlag = false;
 					PrintLine("Нельзя обновлять.");
+				}
 			}
 			return changeFlag;
 		}
 
+		#region махинации с таблицой
 		private static DataTable ConvertByteArrayToDataTable(byte[] byteDataArray)
 		{
 			DataTable dataTable;
@@ -362,5 +386,6 @@ namespace TcpipServer
 				connect.Close();
 			}
 		}
+		#endregion
 	}
 }
