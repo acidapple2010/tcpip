@@ -18,6 +18,7 @@ namespace TcpipServer
 
 		TcpListener mTcpListener;
 		TcpClient mTcpClient;
+		TcpClient mTcpClientLock { get; set; }
 		byte[] mRx, tx, txSize;
 		string name_table;
 		string sqlcmd;
@@ -130,9 +131,8 @@ namespace TcpipServer
 			//Вот все, что нам нужно сделать, это закончить операцию, когда пакеты посылаются
 			try
 			{
-				TcpClient tcpc = (TcpClient)iar.AsyncState;
+				var tcpc = (TcpClient)iar.AsyncState;
 				tcpc.GetStream().EndWrite(iar);
-
 			}
 			catch (Exception ex)
 			{
@@ -144,16 +144,12 @@ namespace TcpipServer
 		//принять поток вызова
 		void OnCompleteAcceptTcpClient(IAsyncResult iar)
 		{
-			//преобразовываем статус иар для tcplistener
-			TcpListener tcpl = (TcpListener)iar.AsyncState;
 			try
-			{
+			{     
+				//преобразовываем статус иар для tcplistener
+				TcpListener tcpl = (TcpListener)iar.AsyncState;
 				//ловим каждый AsyncCall так, что соединение принимается непрерывно
 				mTcpClient = tcpl.EndAcceptTcpClient(iar);
-
-				//OpenData();
-				//GetFlagChange();
-				//var tx = Encoding.Unicode.GetBytes(svChangeFlag);
 				//пошлем детали клиента к серверу
 				tx = Encoding.Unicode.GetBytes("You has been connected to server. \nIP address: " + tbIPAddress.Text + "\n");
 				txSize = Encoding.Unicode.GetBytes(tx.Length + " ");
@@ -177,15 +173,12 @@ namespace TcpipServer
 		//читаем поток данных
 		void OnCompleteReadFromClientStream(IAsyncResult iar)
 		{
-			TcpClient tcpc;
 			int nCountReadBytes = 0;
 			string strRecv;
-
+			//синхронизируем результат в объект tcpclient
+			var tcpc = (TcpClient)iar.AsyncState;
 			try
 			{
-				//синхронизируем результат в объект tcpclient
-				tcpc = (TcpClient)iar.AsyncState;
-
 				//расчитываем количество байт в int
 				nCountReadBytes = tcpc.GetStream().EndRead(iar);
 
@@ -193,9 +186,15 @@ namespace TcpipServer
 				if (nCountReadBytes == 0)
 				{
 					PrintLine("Client has been disconnected. Idle for too long...");
+					if (tcpc == mTcpClientLock && mTcpClientLock != null)
+					{
+						mTcpClientLock = null;
+						UpdateLocking(0);
+					}
 					return;
 				}
-
+				tx = null;
+				txSize = null;
 				//обновляем полученные таблицы в базе 
 				strRecv = Encoding.Unicode.GetString(mRx, 0, nCountReadBytes);
 				switch (strRecv)
@@ -219,39 +218,40 @@ namespace TcpipServer
 						//блокировка
 						if (strRecvSize.Equals("0"))
 						{
-						    if (!svLockingFlag)
-						    {
-						        flagToClient = "1";
-						        UpdateLocking(1);
-						    }
-						    else
-						        flagToClient = "Сервер заблокирован другим пользователем";
+							if (!svLockingFlag && mTcpClientLock == null)
+							{
+								mTcpClientLock = tcpc;
+								flagToClient = "1";
+								UpdateLocking(1);
+							}
+							else
+								flagToClient = "Сервер заблокирован другим пользователем";
 						}
 						//разблокировка
 						else
 						{
 							if (svLockingFlag)
 							{
+								mTcpClientLock = null;
 								flagToClient = "0";
 								UpdateLocking(0);
-
 							}
 							else
 								flagToClient = "Ошибка блокировки";
 						}
 
-					    if (flagToClient.Length != 1)
-					    {
-					        tx = Encoding.Unicode.GetBytes(flagToClient);
-					        txSize = Encoding.Unicode.GetBytes(tx.Length + "+");
-					        mTcpClient.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, mTcpClient);
-					        mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
-					    }
-					    else
-					    {
-					        tx = Encoding.Unicode.GetBytes(flagToClient + "+");
-					        mTcpClient.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, mTcpClient);
-					    }
+						if (flagToClient.Length != 1)
+						{
+							tx = Encoding.Unicode.GetBytes(flagToClient);
+							txSize = Encoding.Unicode.GetBytes(tx.Length + "+");
+							tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
+							tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+						}
+						else
+						{
+							tx = Encoding.Unicode.GetBytes(flagToClient + "+");
+							tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+						}
 
 						strRecvSize = null;
 						break;
@@ -275,6 +275,11 @@ namespace TcpipServer
 			catch (Exception ex)
 			{
 				PrintLine(ex.Message);
+				if (tcpc == mTcpClientLock && mTcpClientLock != null)
+				{
+					mTcpClientLock = null;
+					UpdateLocking(0);
+				}
 			}
 		}
 
@@ -293,7 +298,7 @@ namespace TcpipServer
 			tbConsoleOut.Clear();
 		}
 
-		#region манипуляции с бд
+		#region манипуляции с блокировкой
 		private void SelectDataLock()
 		{
 			try
@@ -330,7 +335,6 @@ namespace TcpipServer
 				PrintLine(ex.Message);
 			}
 		}
-		#endregion
 
 		public bool GetFlagLock()
 		{
@@ -351,6 +355,7 @@ namespace TcpipServer
 			}
 			return flag;
 		}
+		#endregion
 
 		#region махинации с таблицой
 		private static DataTable ConvertByteArrayToDataTable(byte[] byteDataArray)
