@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{30C84F53-78B8-452A-B5E2-8A6D603E5D39}|Default">
   <MonoDevelop.Ide.ItemProperties.TcpipServer PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TcpipServer/ConnectionToDB.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TcpipServer/Server.cs">
     <Files>
-      <File FileName="TcpipServer/Server.cs" Line="179" Column="39" />
+      <File FileName="TcpipServer/Server.cs" Line="178" Column="25" />
       <File FileName="TcpipServer/ConnectionToDB.cs" Line="26" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/Server.cs" relfile="TcpipServer/Server.cs" line="122" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

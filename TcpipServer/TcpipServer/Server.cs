@@ -143,11 +143,11 @@ namespace TcpipServer
 
 		//принять поток вызова
 		void OnCompleteAcceptTcpClient(IAsyncResult iar)
-		{
+		{   
+			//преобразовываем статус иар для tcplistener
+			TcpListener tcpl = (TcpListener)iar.AsyncState;
 			try
-			{     
-				//преобразовываем статус иар для tcplistener
-				TcpListener tcpl = (TcpListener)iar.AsyncState;
+			{
 				//ловим каждый AsyncCall так, что соединение принимается непрерывно
 				mTcpClient = tcpl.EndAcceptTcpClient(iar);
 				//пошлем детали клиента к серверу
@@ -175,10 +175,12 @@ namespace TcpipServer
 		{
 			int nCountReadBytes = 0;
 			string strRecv;
-			//синхронизируем результат в объект tcpclient
-			var tcpc = (TcpClient)iar.AsyncState;
+			TcpClient tcpc = null;
+
 			try
 			{
+				//синхронизируем результат в объект tcpclient
+				tcpc = (TcpClient)iar.AsyncState;
 				//расчитываем количество байт в int
 				nCountReadBytes = tcpc.GetStream().EndRead(iar);
 
