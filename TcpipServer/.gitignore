@@ -1,0 +1,9 @@
+# Ignore (generated) files
+/.sqlite
+/.exe
+/.mdb
+/.suo
+/.resources
+/.txt
+/.userprefs
+TcpipClient/TcpipClient.v11.suo
