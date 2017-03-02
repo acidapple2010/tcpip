@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{39ED9F7B-4AEC-4783-BC88-C685F841016B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TcpipClient/ConnectionToDB.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TcpipClient/Cleint.cs">
     <Files>
-      <File FileName="TcpipClient/Cleint.cs" Line="230" Column="1" />
+      <File FileName="TcpipClient/Cleint.cs" Line="225" Column="29" />
       <File FileName="TcpipClient/ConnectionToDB.cs" Line="2" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
