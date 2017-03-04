@@ -5,3 +5,4 @@
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe
 /Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe.mdb
+/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/bin/Debug/System.Data.SQLite.dll

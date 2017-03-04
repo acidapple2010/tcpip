@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="685a4e86-d542-4e74-9da6-1041b59f9191" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe.mdb" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/bin/Debug/TcpipServer.exe.mdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe.mdb" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.exe.mdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.TcpipClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.TcpipClient/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer.userprefs" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer.userprefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/Server.cs" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/Server.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.csproj.FilesWrittenAbsolute.txt" afterPath="$PROJECT_DIR$/../TcpipServer/TcpipServer/obj/Debug/TcpipServer.csproj.FilesWrittenAbsolute.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +18,8 @@
       <file leaf-file-name="Cleint.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-474">
-              <caret line="195" column="19" lean-forward="false" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
+            <state relative-caret-position="361">
+              <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
               <folding>
                 <marker date="1488489600000" expanded="true" signature="6:263" ph="..." />
                 <marker date="1488489600000" expanded="true" signature="286:13801" ph="{...}" />
@@ -95,10 +90,11 @@
       <file leaf-file-name="ConnectionToDB.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TcpipClient/ConnectionToDB.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="351">
               <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+                <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
                 <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
                 <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
                 <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -125,7 +121,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="499" />
+    <option name="x" value="548" />
     <option name="y" value="22" />
     <option name="width" value="732" />
     <option name="height" value="726" />
@@ -252,11 +248,12 @@
       <workItem from="1488133238457" duration="532000" />
       <workItem from="1488219260267" duration="6076000" />
       <workItem from="1488489037328" duration="919000" />
+      <workItem from="1488631640375" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26668000" />
+    <option name="totallyTimeSpent" value="27525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,7 +265,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="499" y="22" width="732" height="726" extended-state="0" />
+    <frame x="548" y="22" width="732" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -304,11 +301,96 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2925">
+          <caret line="195" column="19" lean-forward="false" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
+          <folding>
+            <marker date="1488489600000" expanded="true" signature="6:263" ph="..." />
+            <marker date="1488489600000" expanded="true" signature="286:13801" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="327:13799" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="895:1025" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="1163:2550" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="1439:2285" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="1962:2270" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="2120:2252" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="2311:2512" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="2617:4282" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="2825:4102" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="2973:3190" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="3311:3511" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="3577:3712" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="3769:3848" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="4136:4271" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="4367:4685" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="4413:4522" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="4564:4675" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="4798:6607" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="5177:6293" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="6074:6279" ph="/* начинаем слушать отклики со стороны сервера на стороне клиента ... */" />
+            <marker date="1488489600000" expanded="true" signature="6326:6597" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="6697:9285" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="6813:9023" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="7075:7333" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="7580:8837" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="8060:8160" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="8189:8297" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="8551:8745" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="8863:8919" ph="/* clChangeFlag = strRecv; ... */" />
+            <marker date="1488489600000" expanded="true" signature="9056:9275" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="9383:9791" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="9409:9612" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="9646:9781" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="9839:9932" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="9979:10083" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="10147:10515" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="10255:10505" ph="/* SelectDataLock(); ... */" />
+            <marker date="1488489600000" expanded="true" signature="10563:11212" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="10684:11202" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="10747:10961" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11016:11188" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11286:11628" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11309:11449" ph="/* принять данные о возможности на изменения таблиц ... */" />
+            <marker date="1488489600000" expanded="true" signature="11479:11490" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11514:11618" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11764:12111" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="11919:12064" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="12115:12728" ph="манипуляции с бд" />
+            <marker date="1488489600000" expanded="true" signature="12171:12709" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="12182:12638" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="12441:12633" ph="/* connpar = new SQLiteConnection(&quot;data source=&quot; + filename_dbinp + &quot;;version=3;failifmissing=true;&quot;); ... */" />
+            <marker date="1488489600000" expanded="true" signature="12662:12705" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="12738:13793" ph="блокировка бд сервера" />
+            <marker date="1488489600000" expanded="true" signature="12818:13139" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="12844:13029" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="13062:13129" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="13206:13774" ph="{...}" />
+            <marker date="1488489600000" expanded="true" signature="13220:13452" ph="/* поcмотреть на кнопке, послать серверу 1 - заблокировать, 0 - разблокировать ... */" />
+            <marker date="1488489600000" expanded="true" signature="13764:13774" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TcpipClient/ConnectionToDB.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
+            <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
+            <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
+            <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
+            <marker date="1488220077000" expanded="true" signature="706:893" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -385,6 +467,7 @@
           <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -469,6 +552,7 @@
           <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -553,6 +637,7 @@
           <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -637,6 +722,7 @@
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -721,6 +807,7 @@
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -805,6 +892,7 @@
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -889,6 +977,7 @@
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -973,6 +1062,7 @@
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -1095,10 +1185,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TcpipClient/ConnectionToDB.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="351">
           <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <marker date="1488220077000" expanded="true" signature="6:68" ph="..." />
+            <marker date="1488220077000" expanded="true" signature="91:901" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="125:899" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="225:354" ph="{...}" />
             <marker date="1488220077000" expanded="true" signature="441:657" ph="{...}" />
@@ -1109,8 +1200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TcpipClient/Cleint.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474">
-          <caret line="195" column="19" lean-forward="false" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
+        <state relative-caret-position="361">
+          <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
           <folding>
             <marker date="1488489600000" expanded="true" signature="6:263" ph="..." />
             <marker date="1488489600000" expanded="true" signature="286:13801" ph="{...}" />
