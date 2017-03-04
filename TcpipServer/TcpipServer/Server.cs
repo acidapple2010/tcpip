@@ -6,7 +6,8 @@ using System.Windows.Forms;
 //Imports for Sockets Programming
 using System.Net;
 using System.Net.Sockets;
-using Mono.Data.Sqlite;
+//using Mono.Data.Sqlite;
+using System.Data.SQLite;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -374,7 +375,7 @@ namespace TcpipServer
 
 		public static void UpdateTable(string filename_dbinp, DataTable dataTable)
 		{
-			using (var connect = new SqliteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
+			using (var connect = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
 			{
 				connect.Open();
 				using (var sqlCommand = connect.CreateCommand())
