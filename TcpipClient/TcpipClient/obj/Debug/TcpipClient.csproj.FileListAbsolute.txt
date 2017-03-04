@@ -7,3 +7,4 @@ C:\Users\a.tsarenko\Documents\GitHub\tcpip\TcpipClient\TcpipClient\obj\Debug\Tcp
 C:\Users\a.tsarenko\Documents\GitHub\tcpip\TcpipClient\TcpipClient\obj\Debug\TcpipClient.Properties.Resources.resources
 C:\Users\a.tsarenko\Documents\GitHub\tcpip\TcpipClient\TcpipClient\obj\Debug\TcpipClient.csproj.GenerateResource.Cache
 C:\Users\a.tsarenko\Documents\GitHub\tcpip\TcpipClient\TcpipClient\obj\Debug\TcpipClient.pdb
+C:\Users\a.tsarenko\Documents\GitHub\tcpip\TcpipClient\TcpipClient\bin\Debug\SQLite.NET.dll

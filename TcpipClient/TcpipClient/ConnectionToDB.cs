@@ -1,22 +1,22 @@
 ﻿using System.Data;
 using System.Data.SQLite;
-using Mono.Data.Sqlite;
+//using Mono.Data.Sqlite;
 
 namespace TcpipClient
 {
     public class ConnectionToDB
     {
-        readonly SqliteConnection connection;
+        readonly SQLiteConnection connection;
 
         public ConnectionToDB(string filename)
         {
-            connection = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;");
+            connection = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;");
         }
 
         public DataSet DSsqlcmdToDB(string nameTable, DataSet dataset, string sqlcmd)
         {
             connection.Open();
-            var da = new SqliteDataAdapter(sqlcmd, connection);
+            var da = new SQLiteDataAdapter(sqlcmd, connection);
             connection.Close();
             da.Fill(dataset, nameTable);
             return dataset;
@@ -25,7 +25,7 @@ namespace TcpipClient
         public void DSsqlcmdToDB(string sqlcmd)
         {
             connection.Open();
-            var command = new SqliteCommand(sqlcmd, connection);
+            var command = new SQLiteCommand(sqlcmd, connection);
             command.ExecuteNonQuery();
             connection.Close();
         }
