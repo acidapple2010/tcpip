@@ -16,7 +16,7 @@ namespace TcpipServer
 
 	public partial class Server : Form
 	{
-
+		StateDB stateServDb = new StateDB(new UnlockDBState());
 		TcpListener mTcpListener;
 		TcpClient mTcpClient;
 		TcpClient mTcpClientLock { get; set; }
@@ -83,6 +83,11 @@ namespace TcpipServer
 			{
 				tbIPAddress.Text = Ipa.ToString();
 			}
+		}
+
+		private void Server_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			UpdateLocking(0);
 		}
 
 		private void btnStartListening_Click(object sender, EventArgs e)
@@ -217,7 +222,7 @@ namespace TcpipServer
 						string flagToClient;
 						//считали с бд сервера флаг блокироки
 						var svLockingFlag = GetFlagLock();
-
+						stateServDb.Locking();
 						//блокировка
 						if (strRecvSize.Equals("0"))
 						{

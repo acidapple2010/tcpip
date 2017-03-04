@@ -140,7 +140,7 @@
             this.connectionGroup.ResumeLayout(false);
             this.connectionGroup.PerformLayout();
             this.ResumeLayout(false);
-
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Server_FormClosing);
         }
 
         #endregion
