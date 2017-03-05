@@ -31,7 +31,7 @@ namespace TcpipServer
 	{
 		public string Locking(StateDB state)
 		{
-			return "Бд уже блокировано";
+			return "Бд уже блокирована";
 		}
 
 		public string Unlocking(StateDB state)
@@ -51,7 +51,7 @@ namespace TcpipServer
 
 		public string Unlocking(StateDB state)
 		{
-			return "Бд уже разблокировано";
+			return "Бд уже разблокирована";
 		}
 	}
 }

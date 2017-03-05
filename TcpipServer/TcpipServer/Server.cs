@@ -212,8 +212,13 @@ namespace TcpipServer
 						strRecvSize = null;
 						break;
 
-					case "-":
+					case "#":
 						mRx = new byte[Convert.ToInt32(strRecvSize)];
+						strRecvSize = null;
+						break;
+
+					case "-":
+						mRx = new byte[2];
 						strRecvSize = null;
 						break;
 
