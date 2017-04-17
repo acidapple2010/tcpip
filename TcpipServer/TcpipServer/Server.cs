@@ -24,6 +24,7 @@ namespace TcpipServer
 		string sqlcmd;
 		string strRecvSize { get; set; }
 		bool updateTable { get; set; }
+        bool isDataSet { get; set; }
 
 		static DataSet dataset_serv = new DataSet();
 		string filename_dbinp = @"db/inpar.sqlite";
@@ -203,21 +204,33 @@ namespace TcpipServer
 				strRecv = Encoding.Unicode.GetString(mRx, 0, nCountReadBytes);
 				switch (strRecv)
 				{
+                    //просто текст 
 					case " ":
 						mRx = new byte[254];
 						strRecvSize = null;
 						break;
 
-					case "#":
+                    //дата сет или таблица
+					case "$":
 						mRx = new byte[Convert.ToInt32(strRecvSize)];
 						strRecvSize = null;
+                        updateTable = true;
+                        isDataSet = true;
 						break;
+                    case "#":
+                        mRx = new byte[Convert.ToInt32(strRecvSize)];
+                        strRecvSize = null;
+                        updateTable = true;
+                        isDataSet = false;
+                        break;
 
+                    //завершение размера пакета 
 					case "-":
 						mRx = new byte[2];
 						strRecvSize = null;
 						break;
 
+                    //приходит если нужно блокировать/разблокировать
 					case "+":
 						mRx = new byte[2];
 						string flagToClient;
@@ -270,7 +283,19 @@ namespace TcpipServer
 							strRecvSize += strRecv;
 						else if (updateTable)
 						{
-							UpdateTable(filename_dbinp, Transformation.convertByteArrayToDataTable(mRx));
+                            if (isDataSet)
+                            {
+                                //UpdateTable(filename_dbinp, Transformation.convertByteArrayToDataSet(mRx));
+                                DataSet dtSet = new DataSet();
+                                dtSet = Transformation.convertByteArrayToDataSet(mRx);
+                                
+                            }
+                            else
+                            {
+                                DataTable dtTable = new DataTable();
+                                dtTable = Transformation.convertByteArrayToDataTable(mRx);
+                                UpdateTable(filename_dbinp, dtTable);
+                            }
 							updateTable = false;
 						}
 						mRx = new byte[2];
@@ -366,10 +391,10 @@ namespace TcpipServer
 		}
 		#endregion
 
-		#region махинации с таблицой
-		public static void UpdateTable(string filename_dbinp, DataTable dataTable)
+		#region махинации с базами данных
+		public static void UpdateTable(string filename, DataTable dataTable)
 		{
-			using (var connect = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
+			using (var connect = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
 			{
 				connect.Open();
 				using (var sqlCommand = connect.CreateCommand())
