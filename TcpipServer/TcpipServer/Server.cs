@@ -3,11 +3,10 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-//Imports for Sockets Programming
 using System.Net;
 using System.Net.Sockets;
-using Mono.Data.Sqlite;
-//using System.Data.SQLite;
+//using Mono.Data.Sqlite;
+using System.Data.SQLite;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -27,11 +26,8 @@ namespace TcpipServer
 		bool updateTable { get; set; }
 
 		static DataSet dataset_serv = new DataSet();
-		//static DataSet dataset_inp = new DataSet();
-
-		//string svChangeNum;
-		string filename_dbinp = @"../../../inpar_Kulygin_1.sqlite";
-		string filename_db_server = @"../../../db_for_server.sqlite";
+		string filename_dbinp = @"db/inpar.sqlite";
+		string filename_db_server = @"db/db_for_server.sqlite";
 
 		public Server()
 		{
@@ -320,7 +316,7 @@ namespace TcpipServer
 				dataset_serv.Clear();
 				name_table = "LST_LOCK";
 				sqlcmd = "select * from " + name_table;
-				dataset_serv = conToDb.DSsqlcmdToDB(name_table, dataset_serv, sqlcmd);
+				dataset_serv = conToDb.dsTableFromDB(name_table, dataset_serv, sqlcmd);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 				/*var connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
@@ -341,7 +337,7 @@ namespace TcpipServer
 				var conToDb = new ConnectionToDB(filename_db_server);
 				name_table = "LST_LOCK";
 				sqlcmd = "update " + name_table + " set LOCK = " + locking;
-				conToDb.DSsqlcmdToDB(sqlcmd);
+				conToDb.sqlCmd(sqlcmd);
 			}
 			catch (Exception ex)
 			{
@@ -385,7 +381,7 @@ namespace TcpipServer
 
 		public static void UpdateTable(string filename_dbinp, DataTable dataTable)
 		{
-			using (var connect = new SqliteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
+			using (var connect = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
 			{
 				connect.Open();
 				using (var sqlCommand = connect.CreateCommand())

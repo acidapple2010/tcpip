@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transformation.cs" />
     <EmbeddedResource Include="Server.resx">
       <DependentUpon>Server.cs</DependentUpon>
     </EmbeddedResource>
