@@ -270,7 +270,7 @@ namespace TcpipServer
 							strRecvSize += strRecv;
 						else if (updateTable)
 						{
-							UpdateTable(filename_dbinp, ConvertByteArrayToDataTable(mRx));
+							UpdateTable(filename_dbinp, Transformation.convertByteArrayToDataTable(mRx));
 							updateTable = false;
 						}
 						mRx = new byte[2];
@@ -367,18 +367,6 @@ namespace TcpipServer
 		#endregion
 
 		#region махинации с таблицой
-		private static DataTable ConvertByteArrayToDataTable(byte[] byteDataArray)
-		{
-			DataTable dataTable;
-			var brFormatter = new BinaryFormatter();
-			using (var memStream = new MemoryStream(byteDataArray))
-			{
-				dataTable = (DataTable)brFormatter.Deserialize(memStream);
-				memStream.Close();
-			}
-			return dataTable;
-		}
-
 		public static void UpdateTable(string filename_dbinp, DataTable dataTable)
 		{
 			using (var connect = new SQLiteConnection("data source=" + filename_dbinp + ";version=3;failifmissing=true;"))
