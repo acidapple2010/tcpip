@@ -215,14 +215,14 @@ namespace TcpipServer
 						mRx = new byte[Convert.ToInt32(strRecvSize)];
 						strRecvSize = null;
                         updateTable = true;
-                        isDataSet = true;
+                        //isDataSet = true;
 						break;
-                    case "#":
-                        mRx = new byte[Convert.ToInt32(strRecvSize)];
-                        strRecvSize = null;
-                        updateTable = true;
-                        isDataSet = false;
-                        break;
+                    //case "#":
+                    //    mRx = new byte[Convert.ToInt32(strRecvSize)];
+                    //    strRecvSize = null;
+                    //    updateTable = true;
+                    //    isDataSet = false;
+                    //    break;
 
                     //завершение размера пакета 
 					case "-":
@@ -281,23 +281,16 @@ namespace TcpipServer
 					default:
 						if (nCountReadBytes == 2)
 							strRecvSize += strRecv;
-						else if (updateTable)
-						{
-                            if (isDataSet)
+                        else if (updateTable)
+                        {                          
+                            var ds_client = new DataSet();
+                            ds_client = Transformation.convertByteArrayToDataSet(mRx);
+                            foreach (DataTable item in ds_client.Tables)
                             {
-                                //UpdateTable(filename_dbinp, Transformation.convertByteArrayToDataSet(mRx));
-                                DataSet dtSet = new DataSet();
-                                dtSet = Transformation.convertByteArrayToDataSet(mRx);
-                                
+                                UpdateTable(ds_client.DataSetName, item);
                             }
-                            else
-                            {
-                                DataTable dtTable = new DataTable();
-                                dtTable = Transformation.convertByteArrayToDataTable(mRx);
-                                UpdateTable(filename_dbinp, dtTable);
-                            }
-							updateTable = false;
-						}
+                            updateTable = false;
+                        }
 						mRx = new byte[2];
 						break;
 				}
@@ -337,11 +330,11 @@ namespace TcpipServer
 		{
 			try
 			{
-				var conToDb = new ConnectionToDB(filename_db_server);
+				//var conToDb = new ConnectionToDB(filename_db_server);
 				dataset_serv.Clear();
 				name_table = "LST_LOCK";
 				sqlcmd = "select * from " + name_table;
-				dataset_serv = conToDb.dsTableFromDB(name_table, dataset_serv, sqlcmd);
+                dataset_serv = ConnectionToDB.dsTableFromDB(name_table, dataset_serv, sqlcmd, filename_db_server);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 				/*var connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
@@ -359,10 +352,10 @@ namespace TcpipServer
 		{
 			try
 			{
-				var conToDb = new ConnectionToDB(filename_db_server);
+				//var conToDb = new ConnectionToDB(filename_db_server);
 				name_table = "LST_LOCK";
 				sqlcmd = "update " + name_table + " set LOCK = " + locking;
-				conToDb.sqlCmd(sqlcmd);
+                ConnectionToDB.sqlcmd(sqlcmd, filename_db_server);
 			}
 			catch (Exception ex)
 			{

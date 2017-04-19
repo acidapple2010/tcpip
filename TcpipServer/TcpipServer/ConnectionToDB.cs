@@ -4,45 +4,47 @@ using System.Data.SQLite;
 
 namespace TcpipServer
 {
-	public class ConnectionToDB
+	public static class ConnectionToDB
 	{
-		readonly SQLiteConnection connection;
-
-		public ConnectionToDB(string filename)
-		{
-			connection = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;");
-		}
-
-        public DataSet dsTableFromDB(string nameTable, DataSet dataset, string sqlcmd)
+        public static DataSet dsTableFromDB(string nameTable, DataSet dataset, string sqlcmd, string filename)
         {
-            connection.Open();
-            using (var da = new SQLiteDataAdapter(sqlcmd, connection))
+            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
-                da.Fill(dataset, nameTable);
+                con.Open();
+                using (var da = new SQLiteDataAdapter(sqlcmd, con))
+                {
+                    da.Fill(dataset, nameTable);
+                }
+                con.Close();
             }
-            connection.Close();
             return dataset;
         }
 
-        public DataSet dsFromDB(DataSet dataset, string sqlcmd)
+        public static DataSet dsFromDB(DataSet dataset, string sqlcmd, string filename)
         {
-            connection.Open();
-            using (var da = new SQLiteDataAdapter(sqlcmd, connection))
+            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
-                da.Fill(dataset);
+                con.Open();
+                using (var da = new SQLiteDataAdapter(sqlcmd, con))
+                {
+                    da.Fill(dataset);
+                }
+                con.Close();
             }
-            connection.Close();
             return dataset;
         }
 
-        public void sqlCmd(string sqlcmd)
+        public static void sqlcmd(string sqlcmd, string filename)
         {
-            connection.Open();
-            using (var command = new SQLiteCommand(sqlcmd, connection))
+            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
-                command.ExecuteNonQuery();
+                con.Open();
+                using (var command = new SQLiteCommand(sqlcmd, con))
+                {
+                    command.ExecuteNonQuery();
+                }
+                con.Close();
             }
-            connection.Close();
         }
 	}
 }
