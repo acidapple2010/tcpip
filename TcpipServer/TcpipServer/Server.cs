@@ -23,12 +23,15 @@ namespace TcpipServer
 		string name_table;
 		string sqlcmd;
 		string strRecvSize { get; set; }
+        bool isChangeNum { get; set; }
 		bool updateTable { get; set; }
         bool isDataSet { get; set; }
 
 		static DataSet dataset_serv = new DataSet();
-		string filename_dbinp = @"db/inpar.sqlite";
-		string filename_db_server = @"db/db_for_server.sqlite";
+		//string filename_dbinp = @"db/inpar.sqlite";
+        //string filename_db_server = @"db/db_for_server.sqlite";
+        public const string PARTH_DB_SERVER = @"db/db_for_server.sqlite";
+        public const string NAME_TAB_DB_SERVER = "LST_CHANGE_NUM";
 
 		public Server()
 		{
@@ -202,98 +205,140 @@ namespace TcpipServer
 				txSize = null;
 				//обновляем полученные таблицы в базе 
 				strRecv = Encoding.Unicode.GetString(mRx, 0, nCountReadBytes);
-				switch (strRecv)
-				{
+                switch (strRecv)
+                {
                     //просто текст 
-					case " ":
-						mRx = new byte[254];
-						strRecvSize = null;
-						break;
+                    case " ":
+                        mRx = new byte[254];
+                        strRecvSize = null;
+                        break;
 
-                    //дата сет или таблица
-					case "$":
-						mRx = new byte[Convert.ToInt32(strRecvSize)];
-						strRecvSize = null;
+                    //дата сет
+                    case "$":
+                        mRx = new byte[Convert.ToInt32(strRecvSize)];
+                        strRecvSize = null;
                         updateTable = true;
                         //isDataSet = true;
-						break;
-                    //case "#":
-                    //    mRx = new byte[Convert.ToInt32(strRecvSize)];
-                    //    strRecvSize = null;
-                    //    updateTable = true;
-                    //    isDataSet = false;
-                    //    break;
+                        break;
+
+                    //получение запроса для таблицы change_num
+                    case "%":
+                        mRx = new byte[Convert.ToInt32(strRecvSize)];
+                        strRecvSize = null;
+                        isChangeNum = true;
+                        break;
+
+                    case "#":
+                        mRx = new byte[2];
+                        strRecvSize = null;
+                        tx = Encoding.Unicode.GetBytes("#");
+                        tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+                        break;
 
                     //завершение размера пакета 
-					case "-":
-						mRx = new byte[2];
-						strRecvSize = null;
-						break;
+                    case "-":
+                        mRx = new byte[2];
+                        strRecvSize = null;
+                        break;
 
                     //приходит если нужно блокировать/разблокировать
-					case "+":
-						mRx = new byte[2];
-						string flagToClient;
-						//считали с бд сервера флаг блокироки
-						var svLockingFlag = GetFlagLock();
-						stateServDb.Locking();
-						//блокировка
-						if (strRecvSize.Equals("0"))
-						{
-							if (!svLockingFlag && mTcpClientLock == null)
-							{
-								mTcpClientLock = tcpc;
-								flagToClient = "1";
-								UpdateLocking(1);
-							}
-							else
-								flagToClient = "Сервер заблокирован другим пользователем";
-						}
-						//разблокировка
-						else
-						{
-							if (svLockingFlag)
-							{
-								mTcpClientLock = null;
-								flagToClient = "0";
-								UpdateLocking(0);
-							}
-							else
-								flagToClient = "Ошибка блокировки";
-						}
-
-						if (flagToClient.Length != 1)
-						{
-							tx = Encoding.Unicode.GetBytes(flagToClient);
-							txSize = Encoding.Unicode.GetBytes(tx.Length + "+");
-							tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
-							tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
-						}
-						else
-						{
-							tx = Encoding.Unicode.GetBytes(flagToClient + "+");
-							tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
-						}
-
-						strRecvSize = null;
-						break;
-
-					default:
-						if (nCountReadBytes == 2)
-							strRecvSize += strRecv;
-                        else if (updateTable)
-                        {                          
-                            var ds_client = new DataSet();
-                            ds_client = Transformation.convertByteArrayToDataSet(mRx);
-                            foreach (DataTable item in ds_client.Tables)
+                    case "+":
+                        mRx = new byte[2];
+                        string flagToClient;
+                        //считали с бд сервера флаг блокироки
+                        var svLockingFlag = GetFlagLock();
+                        stateServDb.Locking();
+                        //блокировка
+                        if (strRecvSize.Equals("0"))
+                        {
+                            if (!svLockingFlag && mTcpClientLock == null)
                             {
-                                UpdateTable(ds_client.DataSetName, item);
+                                mTcpClientLock = tcpc;
+                                flagToClient = "1";
+                                UpdateLocking(1);
                             }
+                            else
+                                flagToClient = "Сервер заблокирован другим пользователем";
+                        }
+                        //разблокировка
+                        else
+                        {
+                            if (svLockingFlag)
+                            {
+                                mTcpClientLock = null;
+                                flagToClient = "0";
+                                UpdateLocking(0);
+                            }
+                            else
+                                flagToClient = "Ошибка блокировки";
+                        }
+
+                        if (flagToClient.Length != 1)
+                        {
+                            tx = Encoding.Unicode.GetBytes(flagToClient);
+                            txSize = Encoding.Unicode.GetBytes(tx.Length + "+");
+                            tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
+                            tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+                        }
+                        else
+                        {
+                            tx = Encoding.Unicode.GetBytes(flagToClient + "+");
+                            tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+                        }
+
+                        strRecvSize = null;
+                        break;
+
+                    default:
+                        if (nCountReadBytes == 2)
+                            strRecvSize += strRecv;
+                        else if (updateTable)
+                        {
+                            var ds_server = new DataSet();
+                            ds_server = Transformation.convertByteArrayToDataSet(mRx);
+                            foreach (DataTable item in ds_server.Tables)
+                            {
+                                UpdateTable(ds_server.DataSetName, item);
+                            }
+
+                            //update change_num table
+
                             updateTable = false;
                         }
-						mRx = new byte[2];
-						break;
-				}
+                        else if (isChangeNum)
+                        {
+                            var ds_server = new DataSet();
+                            string change_num = null;
+
+                            string str = Encoding.Unicode.GetString(mRx);
+                            string[] split = str.Split('/');
+
+                            try
+                            {
+                                ds_server = ConnectionToDB.dsFromDB(ds_server, split[0], PARTH_DB_SERVER);
+                                foreach (DataTable item in ds_server.Tables)
+                                {
+                                    foreach (DataRow item2 in item.Rows)
+                                    {
+                                        change_num = item2["CHANGE_NUM"].ToString();
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+
+                            }
+
+                            //посылаем обратно клиенту данные по запросу, бд, таблице и номеру изменению
+                            tx = Encoding.Unicode.GetBytes(str + '/' + change_num);
+                            txSize = Encoding.Unicode.GetBytes(tx.Length + "%");
+                            tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
+                            tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+                            isChangeNum = false;
+                        }
+                        mRx = new byte[2];
+                        break;
+                }
 
 				PrintLine(strRecv);
 				tcpc.GetStream().BeginRead(mRx, 0, mRx.Length, OnCompleteReadFromClientStream, tcpc);
@@ -334,7 +379,7 @@ namespace TcpipServer
 				dataset_serv.Clear();
 				name_table = "LST_LOCK";
 				sqlcmd = "select * from " + name_table;
-                dataset_serv = ConnectionToDB.dsTableFromDB(name_table, dataset_serv, sqlcmd, filename_db_server);
+                dataset_serv = ConnectionToDB.dsTableFromDB(name_table, dataset_serv, sqlcmd, PARTH_DB_SERVER);
 				//dataset_serv = connect_server.DataSetDB("LST_CHANGE_NUM",dataset_serv);
 				/*var connect = new ConnectionToDB(filename_dbinp);
 				dataset_inp.Clear();
@@ -355,7 +400,7 @@ namespace TcpipServer
 				//var conToDb = new ConnectionToDB(filename_db_server);
 				name_table = "LST_LOCK";
 				sqlcmd = "update " + name_table + " set LOCK = " + locking;
-                ConnectionToDB.sqlcmd(sqlcmd, filename_db_server);
+                ConnectionToDB.sqlcmd(sqlcmd, PARTH_DB_SERVER);
 			}
 			catch (Exception ex)
 			{
