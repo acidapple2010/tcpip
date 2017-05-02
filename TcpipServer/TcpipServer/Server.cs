@@ -303,6 +303,8 @@ namespace TcpipServer
 
                             //update change_num table
 
+                            tx = Encoding.Unicode.GetBytes(" " + ds_server.DataSetName);
+                            tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
                             updateTable = false;
                         }
                         else if (isChangeNum)
@@ -311,7 +313,7 @@ namespace TcpipServer
                             string change_num = null;
 
                             string str = Encoding.Unicode.GetString(mRx);
-                            string[] split = str.Split('/');
+                            string[] split = str.Split('|');
 
                             try
                             {
@@ -323,18 +325,19 @@ namespace TcpipServer
                                         change_num = item2["CHANGE_NUM"].ToString();
                                     }
                                 }
+                                //посылаем обратно клиенту данные по запросу, бд, таблице и номеру изменению
+                                tx = Encoding.Unicode.GetBytes(str + '|' + change_num);
+                                txSize = Encoding.Unicode.GetBytes(tx.Length + "%");
+                                tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
+                                tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
+                                isChangeNum = false;
                             }
                             catch (Exception ex)
                             {
-
+                                tx = Encoding.Unicode.GetBytes(" " + ex.Message);
+                                tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
                             }
 
-                            //посылаем обратно клиенту данные по запросу, бд, таблице и номеру изменению
-                            tx = Encoding.Unicode.GetBytes(str + '/' + change_num);
-                            txSize = Encoding.Unicode.GetBytes(tx.Length + "%");
-                            tcpc.GetStream().BeginWrite(txSize, 0, txSize.Length, onCompleteWriteToClientStream, tcpc);
-                            tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
-                            isChangeNum = false;
                         }
                         mRx = new byte[2];
                         break;
