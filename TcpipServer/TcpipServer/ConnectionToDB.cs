@@ -1,6 +1,6 @@
-﻿using System.Data;
-//using Mono.Data.Sqlite;
-using System.Data.SQLite;
+﻿﻿using System.Data;
+using Mono.Data.Sqlite;
+//using System.Data.SQLite;
 
 namespace TcpipServer
 {
@@ -8,10 +8,10 @@ namespace TcpipServer
 	{
         public static DataSet dsTableFromDB(string nameTable, DataSet dataset, string sqlcmd, string filename)
         {
-            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
+            using (SqliteConnection con = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
                 con.Open();
-                using (var da = new SQLiteDataAdapter(sqlcmd, con))
+                using (var da = new SqliteDataAdapter(sqlcmd, con))
                 {
                     da.Fill(dataset, nameTable);
                 }
@@ -22,10 +22,10 @@ namespace TcpipServer
 
         public static DataSet dsFromDB(DataSet dataset, string sqlcmd, string filename)
         {
-            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
+            using (SqliteConnection con = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
                 con.Open();
-                using (var da = new SQLiteDataAdapter(sqlcmd, con))
+                using (var da = new SqliteDataAdapter(sqlcmd, con))
                 {
                     da.Fill(dataset);
                 }
@@ -36,10 +36,10 @@ namespace TcpipServer
 
         public static void sqlcmd(string sqlcmd, string filename)
         {
-            using (SQLiteConnection con = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
+            using (SqliteConnection con = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
             {
                 con.Open();
-                using (var command = new SQLiteCommand(sqlcmd, con))
+                using (var command = new SqliteCommand(sqlcmd, con))
                 {
                     command.ExecuteNonQuery();
                 }

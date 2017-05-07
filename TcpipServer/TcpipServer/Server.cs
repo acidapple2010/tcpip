@@ -1,12 +1,12 @@
-﻿using System;
+﻿﻿using System;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
 using System.Net;
 using System.Net.Sockets;
-//using Mono.Data.Sqlite;
-using System.Data.SQLite;
+using Mono.Data.Sqlite;
+//using System.Data.SQLite;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -448,7 +448,7 @@ namespace TcpipServer
 		#region махинации с базами данных
 		public static void UpdateTable(string filename, DataTable dataTable)
 		{
-			using (var connect = new SQLiteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
+			using (var connect = new SqliteConnection("data source=" + filename + ";version=3;failifmissing=true;"))
 			{
 				connect.Open();
 				using (var sqlCommand = connect.CreateCommand())
