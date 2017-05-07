@@ -296,12 +296,25 @@ namespace TcpipServer
                         {
                             var ds_server = new DataSet();
                             ds_server = Transformation.convertByteArrayToDataSet(mRx);
+
+                            string[] split = ds_server.DataSetName.Split('|');
                             foreach (DataTable item in ds_server.Tables)
                             {
-                                UpdateTable(ds_server.DataSetName, item);
+                                UpdateTable(split[0], item);                            //update change_num table
+
                             }
 
-                            //update change_num table
+                            if (split[4].Equals("U"))
+                            {
+                                sqlcmd = "update " + NAME_TAB_DB_SERVER + " set CHANGE_NUM = '" + split[3] +
+                                    "' where NAME_DB = '" + split[1] + "' and NAME_TABLE = '" + split[2] + "'";
+                            }
+                            else
+                            {
+                                sqlcmd = "insert into " + NAME_TAB_DB_SERVER +
+                                    " values('" + split[1] + "','" + split[2] + "','" + split[3] + "')";
+                            }
+                            ConnectionToDB.sqlcmd(sqlcmd, PARTH_DB_SERVER);
 
                             tx = Encoding.Unicode.GetBytes(" " + ds_server.DataSetName);
                             tcpc.GetStream().BeginWrite(tx, 0, tx.Length, onCompleteWriteToClientStream, tcpc);
