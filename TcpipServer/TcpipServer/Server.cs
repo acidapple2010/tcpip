@@ -28,9 +28,10 @@ namespace TcpipServer
         bool isDataSet { get; set; }
 
 		static DataSet dataset_serv = new DataSet();
-		//string filename_dbinp = @"db/inpar.sqlite";
+        //string filename_dbinp = @"db/inpar.sqlite";
         //string filename_db_server = @"db/db_for_server.sqlite";
         public const string PARTH_DB_SERVER = @"db/db_for_server.sqlite";
+        //public const string PARTH_DB_SERVER = "/Users/mac/GitHub/acidapple2010/tcpip/TcpipServer/TcpipServer/bin/Debug/db/db_for_server.sqlite";
         public const string NAME_TAB_DB_SERVER = "LST_CHANGE_NUM";
 
 		public Server()
@@ -218,7 +219,6 @@ namespace TcpipServer
                         mRx = new byte[Convert.ToInt32(strRecvSize)];
                         strRecvSize = null;
                         updateTable = true;
-                        //isDataSet = true;
                         break;
 
                     //получение запроса для таблицы change_num
